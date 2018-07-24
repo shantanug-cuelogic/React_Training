@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import classes from './App.css';
-
-import Person from '../Components/Persons/Person/Practice';
+import Cockpit from '../Components/Cockpit/Cockpit'
+import Persons from '../Components/Persons/Persons';
 
 class App extends Component {
   
@@ -14,7 +14,9 @@ class App extends Component {
       {id: 5, name:"Gauri", age:25}
       
 
-    ]
+    ],
+    showstatus: false
+    
   }
 
   changevalue = (event,id) => {
@@ -52,49 +54,24 @@ class App extends Component {
   render() {
   
     
-      const dynamicstyle = [];
-      if(this.state.person.length===0)
-      {
-        dynamicstyle.push(classes.one);
-      }
-      if(this.state.person.length===1)
-      {
-        dynamicstyle.push(classes.two);
-      }
-      if(this.state.person.length===2)
-      {
-        dynamicstyle.push(classes.three);
-      }
-      if(this.state.person.length===3)
-      {
-        dynamicstyle.push(classes.four);
-      }
-      if(this.state.person.length===4)
-      {
-        dynamicstyle.push(classes.five);
-      }
-
-      let buttonstyle = '' ;
+     
 
     let person = null;
         if(this.state.showstatus)
         {
         person = (
           <div> 
-            { this.state.person.map( (person,index) =>{
-              return <Person
-              name = {person.name} 
-              age={person.age}
-              click ={()=> this.deleteperson(index)} 
-              key ={person.id}
-              change={(event)=> this.changevalue(event,person.id)}
-              />
-            })}
+            <Persons 
+            persons={this.state.person}
+            click={this.deleteperson}
+            change={this.changevalue}
+            
+            />
             
           </div>
         );
 
-        buttonstyle=classes.red;
+       
        
         }
         else{
@@ -104,10 +81,11 @@ class App extends Component {
     return (
     
       <div className={classes.App}>
-            <h1>First react App</h1>
-            <h3 className={dynamicstyle}>Changes Color According to Manipulation </h3>
-            <button className={buttonstyle}
-            onClick={this.toggle}> CLick me </button>
+            <Cockpit
+            status ={this.state.showstatus}
+            person = {this.state.person}
+            click ={this.toggle}
+            />
            {person}
       </div>
       

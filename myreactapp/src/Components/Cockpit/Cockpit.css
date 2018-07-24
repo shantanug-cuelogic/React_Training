@@ -1,0 +1,48 @@
+.Cockpit {
+    text-align: center;
+  }
+
+.one {
+    color: red;
+    font-weight: bolder;
+  }
+  
+  .two {
+    color: green;
+    font-weight: bolder;
+  }
+  
+  .three {
+    color: blue;
+    font-weight: bolder;
+  }
+  
+  .four {
+    color: orange;
+    font-weight: bolder;
+  }
+  
+  .five {
+    color: yellow;
+    font-weight: bolder;
+  }
+  
+  .Cockpit button {
+   background-color: green;
+   border: 1px solid black;
+   height: 40px;
+   width: 100px;
+  
+  }
+  
+  .Cockpit button:hover{
+    background-color: lightgreen;
+  }
+  
+  .Cockpit button.red{
+    background-color: red;
+  }
+  
+  .Cockpit button.red:hover{
+    background-color: salmon;
+  }

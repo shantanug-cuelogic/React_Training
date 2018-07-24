@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from './prac.css';
 
-
-const Practice = (props) => {
-
+class Person extends Component
+{
+    render() {
 
     return (
         <div className={classes.Prac}>
-            <p onClick={props.click}>My name is {props.name} and my age is {props.age}</p>
-            <input type="text" onChange={props.change} value={props.name} />          
+            <p onClick={this.props.click}>My name is {this.props.name} and my age is {this.props.age}</p>
+            <input type="text" onChange={this.props.change} value={this.props.name} />          
         </div>
     );
+    }
 }
 
 
 
-export default Practice;
+export default Person;
