@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App h1{
+  color: red;
+}
+
+.one {
+  color: red;
+  font-weight: bolder;
+}
+
+.two {
+  color: green;
+  font-weight: bolder;
+}
+
+.three {
+  color: blue;
+  font-weight: bolder;
+}
+
+.four {
+  color: orange;
+  font-weight: bolder;
+}
+
+.five {
+  color: yellow;
+  font-weight: bolder;
+}
+
+.App button {
+ background-color: green;
+ border: 1px solid black;
+ height: 40px;
+ width: 100px;
+
+}
+
+.App button:hover{
+  background-color: lightgreen;
+}
+
+.App button.red{
+  background-color: red;
+}
+
+.App button.red:hover{
+  background-color: salmon;
+}

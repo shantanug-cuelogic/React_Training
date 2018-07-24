@@ -1,0 +1,15 @@
+.Prac{
+    border: 2px solid #eee;
+    width: 60%;
+    margin: 10px auto ;
+   box-shadow: 2pc solid #ccc;
+    text-align: center;
+    padding: 10px;
+
+}
+
+@media (min-width:500px){
+    .Person{
+        width: 450px;
+    }
+}
