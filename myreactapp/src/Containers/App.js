@@ -2,6 +2,7 @@
 import classes from './App.css';
 import Cockpit from '../Components/Cockpit/Cockpit'
 import Persons from '../Components/Persons/Persons';
+import withClass from '../HOC/HOC';
 
 class App extends Component {
   
@@ -80,14 +81,14 @@ class App extends Component {
 
     return (
     
-      <div className={classes.App}>
+      <withClass classes={classes.App}>
             <Cockpit
             status ={this.state.showstatus}
             person = {this.state.person}
             click ={this.toggle}
             />
            {person}
-      </div>
+      </withClass>
       
     );
     //return React.createElement('div',{className:"App"},React.createElement('h1',null,'"This is awesome!!"'));
